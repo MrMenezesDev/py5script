@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Prova de Conceito Pyscript + P5.JS</title>
+  <!-- PyScript CSS -->
+  <script src="enable.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@pyscript/core@0.4.32/dist/core.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pyscript/core@0.4.32/dist/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+
+
+  <py-config>
+    autoclose_loader = true
+    runtimes = [
+    { src = "https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js", name = "pyodide-alpha", lang = "python" },
+    ]
+  </py-config>
+</head>
+
+<body>
+  <script>
+    function setup() { }
+  </script>
+
+  <script type="py-editor" config='config.json'>
+    from p5script import *
+    
+    y = 0
+    
+    def setup():
+        createCanvas(720, 400)
+        stroke(255)
+        frameRate(30)
+    
+    def draw(*args):
+        global y
+        background(0)
+        y = y - 1
+        if (y < 0):
+            y = height
+        line(0, y, width, y)
+        
+    iniciar_animacao(setup, draw)
+      </script>
+</body>
+</html>
