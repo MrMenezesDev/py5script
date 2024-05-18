@@ -14,7 +14,7 @@ Este é um exemplo de prova de conceito que combina o uso do Pyscript com o p5.j
 3. Execute o servidor local para visualizar a animação:
 
     ```bash
-    python server.py
+    python -m http.server
     ```
 
 4. Abra o navegador e acesse `http://localhost:8000/musical_bubbles.html` para ver a animação em ação.
