@@ -19,6 +19,8 @@ Este é um exemplo de prova de conceito que combina o uso do Pyscript com o p5.j
 
 4. Abra o navegador e acesse `http://localhost:8000/musical_bubbles.html` para ver a animação em ação.
 
+5. Ou acesse https://mrmenezesdev.github.io/py5script/
+
 ## Como funciona
 
 Este projeto utiliza o Pyscript para gerar código JavaScript a partir de código Python. O p5.js é então utilizado para renderizar a animação no navegador.
