@@ -7,8 +7,6 @@ importing_module = inspect.currentframe().f_back.f_globals['__name__']
 def iniciar_animacao(setup, draw):
     setup()
     def animacao(*args):
-        globals()['height'] = _P5_INSTANCE.height
-        globals()['width'] = _P5_INSTANCE.width
         draw()
         _P5_INSTANCE.requestAnimationFrame(animacao)
     _P5_INSTANCE.requestAnimationFrame(animacao)
